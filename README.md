@@ -2,12 +2,12 @@
 Library to use entitas without code generation
 
 # How it works
-It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. The only drawback is reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api.
+It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api.
 
 # Workflow
 
 You don't need to generate any code. 
-1. You need to register each new component in lookup table. Just add line to file, I add to Comps.cs. 
+1. You need to register each new component in lookup table. Just add line to file, you'll be using to say which component. For example, I name that file Comps.cs.
 2. And you need to add an editor to each component for Add/Replace to work. For single values you can inherit SingleValueComponent to not write boilerplate. No need to write anything special for flag components.
 
 Examples:
