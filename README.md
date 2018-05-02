@@ -2,7 +2,7 @@
 Library to use entitas without code generation
 
 # How it works
-It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api. So, I don't think this matters.
+It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api.
 
 # Workflow
 
