@@ -2,7 +2,7 @@
 Library to use entitas without code generation
 
 # How it works
-It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api.
+It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api. So, I don't think this matters.
 
 # Workflow
 
@@ -20,8 +20,8 @@ public class DestroyingComponent : IComponent {} // it's a flag, so it is simple
   
 public class PositionComponent : IComponent
 {
-    public float x;
-    public float y;
+    public float x { get; private set; } // you can encapsulate fields thanks to Editor by the way
+    public float y { get; private set; } // so fields wount be updated without calling entity.Add() / Replace() and notifying listeners
 
     public class Editor : ComponentEditor<PositionComponent>
     {
