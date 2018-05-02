@@ -68,6 +68,10 @@ entity.SetFlag(Comps.Destroying, false); // it removes DestroyingComponent inter
 
 entity.Has(Comps.Destroying); // check if entity has component
 
+IMatcher matcher = Matcher.AllOf(Comps.Age, Comps.Position);
+
+Group group = Pools.pool.GetGroup(Matcher.AllOf(Comps.Age, Comps.Position));
+
 ```
 
 ## Notes
