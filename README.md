@@ -7,7 +7,7 @@ It works thanks to generics, lookup table and reflection for initializing indexe
 # Workflow
 
 You don't need to generate any code. 
-1. You need to register each new component in lookup table. Just add line to file, you'll be using to say which component. For example, I name that file Comps.cs.
+1. You need to register each new component in lookup table. Just add line to Comps.cs. You'll be using it to say which component later on.
 2. And you need to add an editor to each component for Add/Replace to work. For single values you can inherit SingleValueComponent to not write boilerplate. No need to write anything special for flag components.
 
 Examples:
