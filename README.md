@@ -25,7 +25,7 @@ public class PositionComponent : IComponent
 
     public class Editor : ComponentEditor<PositionComponent>
     {
-        public Entity Apply(float x, float y)
+        public Entity Apply(float x, float y) // Add / Replace returns Editor, so any method here will be visible to client code. Return Entity for chaining
         {
             component.x = x;
             component.y = y;
