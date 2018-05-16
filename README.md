@@ -1,6 +1,9 @@
 # EntitasWithoutCodeGeneration
-Library to use entitas without code generation. I use it in one of my android (unity) hobby projects. 
+Library to use entitas without code generation. It is working, I use it in one of my android (unity) hobby projects. 
+
 Discussion: https://github.com/sschmid/Entitas-CSharp/issues/345
+
+Feel free to make an issue or contribution.
 
 # How it works
 It works thanks to generics, lookup table and reflection for initializing indexes. My intent was to keep original performance. It has drawback, it has a reflection step to initialize indexes (see EntitasData.cs). But it is done only once, the first time you use api.
